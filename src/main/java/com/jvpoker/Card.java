@@ -47,8 +47,7 @@ public class Card implements Comparable<Card>
 			default: return 'E';
 		}
 	}
-
-	@Override     
+ 
 	public int compareTo(Card card) {          
 
 		if (this.number < card.number)

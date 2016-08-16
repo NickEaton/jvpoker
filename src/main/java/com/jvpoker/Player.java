@@ -56,12 +56,10 @@ public class Player implements Comparable<Player> {
 		return amount;
 	}
 
-	@Override
 	public String toString() {
 		return "P: " + id + ", M: " + totalMoney;   
 	}
-
-	@Override
+	
 	public int compareTo(Player player) {
 		if (this.getHandRank() < player.getHandRank())
 		{
@@ -74,7 +72,8 @@ public class Player implements Comparable<Player> {
 		else
 		{		return 1;
 		}
-	}
+	} 
 
 }
+
 
