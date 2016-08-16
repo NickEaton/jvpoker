@@ -1,32 +1,35 @@
 package com.jvpoker;
 
-import java.util.*;
-import java.util.logging.Logger;
-
-public class EasyAI extends JVAI {
+public class MediumAI extends JVAI {
 
 	@Override
 	protected double getPercentFold(Hand hand) {
-		return .15;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	protected double getPercentRaise(Hand hand) {
-		return .2;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	protected double getPercentCall(Hand hand) {
-		return .2;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	protected double getPercentCheck(Hand hand) {
-		return .05;
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	protected double getPercetnAllIn(Hand hand) {
-		return .4;
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
 }

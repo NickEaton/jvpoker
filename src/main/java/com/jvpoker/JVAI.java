@@ -15,14 +15,14 @@ public abstract class JVAI {
 	private static Logger log = Logger.getLogger("AILog", JVAI.class.getName());
 	
 	//The various AI moves
-	public enum MOVE { FOLD, RAISE, CALL, CHECK, ALL_IN }
+	public static enum MOVE { FOLD, RAISE, CALL, CHECK, ALL_IN }
 	
 	//Methods to implement to get the AI's %'s based on difficulty
-	protected abstract int getPercentFold(Hand hand);
-	protected abstract int getPercentRaise(Hand hand);
-	protected abstract int getPercentCall(Hand hand);
-	protected abstract int getPercentCheck(Hand hand);
-	protected abstract int getPerCcetnAllIn(Hand hand);
+	protected abstract double getPercentFold(Hand hand);
+	protected abstract double getPercentRaise(Hand hand);
+	protected abstract double getPercentCall(Hand hand);
+	protected abstract double getPercentCheck(Hand hand);
+	protected abstract double getPercetnAllIn(Hand hand);
 
 	//@return the move the AI chooses to make
 	protected MOVE getMove(Hand hand) {
@@ -50,7 +50,7 @@ public abstract class JVAI {
 	}
 	
 	//@return if a hand is a straight draw
-	private boolean isStraightDraw(Hand hand) {
+	protected boolean isStraightDraw(Hand hand) {
 		Card[] cards = hand.getHand();
 		if(cards.length == 2) {
 			return (cards[0].getNumber()+1 == cards[1].getNumber()) ? true : false;
@@ -71,7 +71,7 @@ public abstract class JVAI {
 	}
 	
 	//@return if a hand is a flush draw
-	private boolean isFlushDraw(Hand hand) {
+	protected boolean isFlushDraw(Hand hand) {
 		Card[] cards = hand.getHand();
 		if(cards.length == 2) {
 			return (cards[0].getSuite() == cards[1].getSuite()) ? true : false;
@@ -89,7 +89,7 @@ public abstract class JVAI {
 	}
 	
 	//@return if a hand is a kind draw
-	private boolean isKindDraw(Hand hand) {
+	protected boolean isKindDraw(Hand hand) {
 		Card[] cards = hand.getHand();
 		if(cards.length == 2) {
 			return (cards[0].getNumber() == cards[0].getNumber()) ? true : false;
