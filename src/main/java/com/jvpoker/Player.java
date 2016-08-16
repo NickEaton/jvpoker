@@ -70,7 +70,8 @@ public class Player implements Comparable<Player> {
 			return 0;
 		}
 		else
-		{		return 1;
+		{
+			return 1;
 		}
 	} 
 
