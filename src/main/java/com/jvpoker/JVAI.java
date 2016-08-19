@@ -24,6 +24,11 @@ public abstract class JVAI {
 	protected abstract double getPercentCheck(Hand hand);
 	protected abstract double getPercetnAllIn(Hand hand);
 
+	//reset AI vars
+	public void resetAI() {
+		percentFold=0; percentRaise=0; percentCall=0; percentCheck=0; percentAllIn=0;
+		handRank=0; hand = null;
+	}
 	//@return the move the AI chooses to make
 	protected MOVE getMove(Hand hand) {
 		final double rand = new Random().nextDouble();
